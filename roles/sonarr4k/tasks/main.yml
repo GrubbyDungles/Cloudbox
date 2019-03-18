@@ -78,8 +78,7 @@
       PUID: "{{ uid }}"
       PGID: "{{ gid }}"
       UMASK: 002
-      MONO_TLS_PROVIDER: legacy
-      VIRTUAL_HOST: "sonarr4k.{{ domain }}"
+      VIRTUAL_HOST: "sonarr4k.{{domain}}"
       VIRTUAL_PORT: 8989
       LETSENCRYPT_HOST: "sonarr4k.{{ domain }}"
       LETSENCRYPT_EMAIL: "{{ email }}"

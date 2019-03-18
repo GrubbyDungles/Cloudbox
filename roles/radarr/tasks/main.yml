@@ -76,8 +76,7 @@
       PUID: "{{ uid }}"
       PGID: "{{ gid }}"
       UMASK: 002
-      MONO_TLS_PROVIDER: legacy
-      VIRTUAL_HOST: "radarr.{{ domain }}"
+      VIRTUAL_HOST: "radarr.{{domain}}"
       VIRTUAL_PORT: 7878
       LETSENCRYPT_HOST: "radarr.{{ domain }}"
       LETSENCRYPT_EMAIL: "{{ email }}"
