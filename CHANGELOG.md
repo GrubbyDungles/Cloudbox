@@ -162,7 +162,7 @@ Links:
 - **Plex Autoscan:** Updates `PLEX_LD_LIBRARY_PATH` in `config.json`.
 - **Backups:** Check if `root_fstype` is defined before looking for 'btrfs'.
 - **Readme:** Updated Badges.
-- **Common:** Do Btrfs tasks when only when necessary.
+- **Common:** Do Btrfs tasks only when necessary.
 - **Kernel:** Ignore errors during kernel headers install.
 - **Docker:** BTRFS - Creates a 20GB pseudo filesystem that is mounted on `/var/lib/docker` (#279)
 - **Suitarr:** Removed env `MONO_TLS_PROVIDER: legacy` from related docker containers.
