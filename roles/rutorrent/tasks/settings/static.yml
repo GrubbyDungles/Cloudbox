@@ -119,11 +119,27 @@
     line: 'schedule = watch_directory,5,5,"load.start=/downloads/torrents/rutorrent/watched/*.torrent,d.delete_tied="'
     state: present
 
-- name: Set 'upload_max_filesize' to 8M
+- name: Set 'network.xmlrpc.size_limit.set' to 20M
   lineinfile:
-    path: "/opt/rutorrent/php/php.ini"
+    path: "/opt/rutorrent/rtorrent/rtorrent.rc"
+    regexp: '^network\.xmlrpc\.size_limit\.set\s*=.*'
+    line: 'network.xmlrpc.size_limit.set = 20M'
+    state: present
+
+- name: Add line space
+  lineinfile:
+    path: "/opt/rutorrent/rtorrent/rtorrent.rc"
+    insertbefore: 'network.xmlrpc.size_limit.set = 20M'
+    line: ""
+    state: present
+
+## php-local.ini
+
+- name: Set 'upload_max_filesize' to 20M
+  lineinfile:
+    path: "/opt/rutorrent/php/php-local.ini"
     regexp: '^upload_max_filesize\s*=.*'
-    line: 'upload_max_filesize = 8M'
+    line: 'upload_max_filesize = 20M'
     state: present
 
 ## nginx.conf
