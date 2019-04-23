@@ -16,11 +16,6 @@
     path: "/opt/rutorrent/rtorrent/rtorrent.rc"
     state: present
 
-- name: Wait for 'php.ini' to be created
-  wait_for:
-    path: "/opt/rutorrent/php/php.ini"
-    state: present
-
 - name: Wait for 'nginx.conf' to be created
   wait_for:
     path: "/opt/rutorrent/nginx/nginx.conf"
