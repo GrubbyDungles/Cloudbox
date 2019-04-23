@@ -35,3 +35,10 @@
     insertbefore: '^network\.local_address\.set\s*=.*'
     line: "# The ip address reported to the tracker"
     state: present
+
+- name: Set 'execute'
+  lineinfile:
+    path: "/opt/rutorrent/rtorrent/rtorrent.rc"
+    regexp: '^execute = {sh,-c,/usr/bin/php7 /usr/share/webapps/rutorrent/php/initplugins.php abc &}'
+    line: 'execute = {sh,-c,/usr/bin/php7 /app/rutorrent/php/initplugins.php abc &}'
+    state: present
