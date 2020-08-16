@@ -27,6 +27,8 @@ nginx:
 ombi:
   subdomain: ombi
 sickbeard_mp4_automator: no
+sysctl:
+  max_user_watches: 131072
 gpu:
   intel: yes
   nvidia:
